@@ -1,29 +1,35 @@
 function orderFood() {
-    let selectedItems = [];
-    
-    // Burger Singh items
-    let burgerItems = document.querySelectorAll('input[name="burgerSinghItem"]:checked');
-    burgerItems.forEach(item => {
-        selectedItems.push(item.value);
-    });
+    // Get selected items from each restaurant menu
+    const selectedItems = [];
 
-    // Coffee Ka Khauf items
-    let coffeeItems = document.querySelectorAll('input[name="coffeeKaKhaufItem"]:checked');
-    coffeeItems.forEach(item => {
-        selectedItems.push(item.value);
-    });
+    // Burger Singh
+    const burgerSinghItems = document.getElementsByName('burgerSinghItem');
+    for (let i = 0; i < burgerSinghItems.length; i++) {
+        if (burgerSinghItems[i].checked) {
+            selectedItems.push(burgerSinghItems[i].value);
+        }
+    }
 
-    // Sardarbucks items
-    let sardarItems = document.querySelectorAll('input[name="sardarbucksItem"]:checked');
-    sardarItems.forEach(item => {
-        selectedItems.push(item.value);
-    });
+    // Coffee Ka Khauf
+    const coffeeKaKhaufItems = document.getElementsByName('coffeeKaKhaufItem');
+    for (let i = 0; i < coffeeKaKhaufItems.length; i++) {
+        if (coffeeKaKhaufItems[i].checked) {
+            selectedItems.push(coffeeKaKhaufItems[i].value);
+        }
+    }
 
-    // Check if any items were selected
+    // Sardarbucks
+    const sardarbucksItems = document.getElementsByName('sardarbucksItem');
+    for (let i = 0; i < sardarbucksItems.length; i++) {
+        if (sardarbucksItems[i].checked) {
+            selectedItems.push(sardarbucksItems[i].value);
+        }
+    }
+
+    // Display the selected items
     if (selectedItems.length > 0) {
-        localStorage.setItem("orderItems", JSON.stringify(selectedItems));
-        window.location.href = "order.html";  // Redirect to order.html
+        alert('Your order: ' + selectedItems.join(', '));
     } else {
-        alert("Please select at least one item.");
+        alert('Please select some items from the menu.');
     }
 }
