@@ -9,12 +9,20 @@
     <script type="text/javascript">
         ;(function(n,e,w,r,o,l,d){n[r]=n[r]||function(){(n[r].q=n[r].q||[]).push(arguments)}; 
         o=e.createElement(w);o.async=1;o.src="https://js-agent.newrelic.com/nr-1129.min.js"; 
-        l=e.getElementsByTagName(w)[0];l.parentNode.insertBefore(o,l)})(
-        window,document,"script","newrelic");
+        l=e.getElementsByTagName(w)[0];l.parentNode.insertBefore(o,l)})(window,document,"script","newrelic");
         newrelic('setPageViewName', 'HomePage');
     </script>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Login Check Script -->
+    <script type="text/javascript">
+        // Check if the user is logged in
+        if (!localStorage.getItem("isLoggedIn")) {
+            window.location.href = "login.html";  // Redirect to login page if not logged in
+        }
+    </script>
+
 </head>
 <body>
 
