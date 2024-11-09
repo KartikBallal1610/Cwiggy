@@ -3,28 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery</title>
+    <title>Cwiggy</title>
+
+    <!-- New Relic Browser Monitoring Script -->
+    <script type="text/javascript">
+        ;(function(n,e,w,r,o,l,d){n[r]=n[r]||function(){(n[r].q=n[r].q||[]).push(arguments)}; 
+        o=e.createElement(w);o.async=1;o.src="https://js-agent.newrelic.com/nr-1129.min.js"; 
+        l=e.getElementsByTagName(w)[0];l.parentNode.insertBefore(o,l)})(
+        window,document,"script","newrelic");
+        newrelic('setPageViewName', 'HomePage');
+    </script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Food Delivery Service</h1>
-    <div class="restaurant" id="restaurant1">
-        <h2>Restaurant 1</h2>
+
+    <h1>Welcome to Cwiggy</h1>
+
+    <!-- Burger Singh -->
+    <div class="restaurant">
+        <h2>Burger Singh</h2>
         <ul>
-            <li><button class="order-btn">Pizza</button></li>
-            <li><button class="order-btn">Burger</button></li>
-            <li><button class="order-btn">Pasta</button></li>
+            <li><input type="checkbox" id="burgerSinghItem1" name="burgerSinghItem" value="Burger Singh Classic Burger"> Burger Singh Classic Burger</li>
+            <li><input type="checkbox" id="burgerSinghItem2" name="burgerSinghItem" value="Paneer Tikka Burger"> Paneer Tikka Burger</li>
+            <li><input type="checkbox" id="burgerSinghItem3" name="burgerSinghItem" value="Fries"> Fries</li>
         </ul>
     </div>
-    <div class="restaurant" id="restaurant2">
-        <h2>Restaurant 2</h2>
+
+    <!-- Coffee Ka Khauf -->
+    <div class="restaurant">
+        <h2>Coffee Ka Khauf</h2>
         <ul>
-            <li><button class="order-btn">Sushi</button></li>
-            <li><button class="order-btn">Ramen</button></li>
-            <li><button class="order-btn">Tempura</button></li>
+            <li><input type="checkbox" id="coffeeKaKhaufItem1" name="coffeeKaKhaufItem" value="Espresso"> Espresso</li>
+            <li><input type="checkbox" id="coffeeKaKhaufItem2" name="coffeeKaKhaufItem" value="Cappuccino"> Cappuccino</li>
+            <li><input type="checkbox" id="coffeeKaKhaufItem3" name="coffeeKaKhaufItem" value="Latte"> Latte</li>
         </ul>
     </div>
-    <!-- Repeat for other restaurants -->
+
+    <!-- Sardarbucks -->
+    <div class="restaurant">
+        <h2>Sardarbucks</h2>
+        <ul>
+            <li><input type="checkbox" id="sardarbucksItem1" name="sardarbucksItem" value="Sardar's Special Brew"> Sardar's Special Brew</li>
+            <li><input type="checkbox" id="sardarbucksItem2" name="sardarbucksItem" value="Sardar Chai"> Sardar Chai</li>
+            <li><input type="checkbox" id="sardarbucksItem3" name="sardarbucksItem" value="Masala Coffee"> Masala Coffee</li>
+        </ul>
+    </div>
+
+    <button onclick="orderFood()">Order</button>
+
     <script src="script.js"></script>
 </body>
 </html>
