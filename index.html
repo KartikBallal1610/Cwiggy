@@ -12,6 +12,10 @@
         l=e.getElementsByTagName(w)[0];l.parentNode.insertBefore(o,l)})(window,document,"script","newrelic");
         newrelic('setPageViewName', 'HomePage');
     </script>
+ 
+    if (!localStorage.getItem("isLoggedIn")) {
+        window.location.href = "login.html";  
+    }
 
     <link rel="stylesheet" href="style.css">
 
