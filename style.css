@@ -1,18 +1,28 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-h1, h2 {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
     color: #333;
 }
 
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3em;
+}
+
 .restaurant {
-    background-color: #fff;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant h2 {
+    font-size: 2em;
+    color: #3c3c3c;
 }
 
 ul {
@@ -20,13 +30,17 @@ ul {
     padding: 0;
 }
 
-li {
-    margin: 5px 0;
+ul li {
+    margin: 10px 0;
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 10px 0;
+    font-size: 1.2em;
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
@@ -34,5 +48,5 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #218838;
 }
