@@ -1,14 +1,14 @@
-document.getElementById('loginForm').addEventListener('submit', function (event) {
+document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-    let username = document.getElementById('username').value;
-    let password = document.getElementById('password').value;
-
-    // Simple validation (you can replace this with backend logic)
-    if (username === "admin" && password === "password123") {
-        localStorage.setItem("loggedIn", "true");
-        window.location.href = "index.html";  // Redirect to homepage after successful login
+    // Check credentials (for testing, using hardcoded values)
+    if (username === 'admin' && password === 'password123') {
+        localStorage.setItem('loggedIn', 'true');
+        window.location.href = 'index.html'; // Redirect to the main page
     } else {
-        alert("Invalid login credentials.");
+        alert('Invalid login credentials!');
     }
 });
